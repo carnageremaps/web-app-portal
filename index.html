@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comprehensive Web Application</title>
     <style>
-        /* ==============================================
-           GLOBAL STYLES & RESET
-           ============================================== */
+        /* Global Styles & Reset */
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* Ensures padding/borders don't add to element width */
+            box-sizing: border-box;
         }
 
-        /* Main body styling with gradient background */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -22,9 +19,6 @@
             color: #333;
         }
 
-        /* ==============================================
-           LAYOUT CONTAINERS
-           ============================================== */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -33,20 +27,19 @@
 
         /* Header with glassmorphism effect */
         .header {
-            background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-            backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
             border-radius: 15px;
             padding: 20px;
             margin-bottom: 30px;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        /* Navigation bar layout */
         .nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            flex-wrap: wrap;
             gap: 15px;
         }
 
@@ -56,23 +49,19 @@
             flex-wrap: wrap;
         }
 
-        /* ==============================================
-           BUTTON STYLES
-           ============================================== */
-        /* Base button styling */
+        /* Button Styles */
         .btn {
             padding: 12px 24px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
-            transition: all 0.3s ease; /* Smooth hover transitions */
+            transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
             text-align: center;
         }
 
-        /* Primary button (green) - used for main actions */
         .btn-primary {
             background: #4CAF50;
             color: white;
@@ -80,10 +69,9 @@
 
         .btn-primary:hover {
             background: #45a049;
-            transform: translateY(-2px); /* Lift effect on hover */
+            transform: translateY(-2px);
         }
 
-        /* Secondary button (blue) - used for secondary actions */
         .btn-secondary {
             background: #2196F3;
             color: white;
@@ -94,7 +82,6 @@
             transform: translateY(-2px);
         }
 
-        /* Danger button (red) - used for destructive actions */
         .btn-danger {
             background: #f44336;
             color: white;
@@ -105,9 +92,8 @@
             transform: translateY(-2px);
         }
 
-        /* WhatsApp button with brand colors */
         .btn-whatsapp {
-            background: #25D366; /* Official WhatsApp green */
+            background: #25D366;
             color: white;
             display: flex;
             align-items: center;
@@ -119,10 +105,7 @@
             transform: translateY(-2px);
         }
 
-        /* ==============================================
-           CARD COMPONENTS
-           ============================================== */
-        /* Main card container with glassmorphism */
+        /* Card Components */
         .card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
@@ -137,9 +120,7 @@
             color: #333;
         }
 
-        /* ==============================================
-           FORM ELEMENTS
-           ============================================== */
+        /* Form Elements */
         .form-group {
             margin-bottom: 20px;
         }
@@ -151,7 +132,6 @@
             color: #555;
         }
 
-        /* Input field styling */
         .form-control {
             width: 100%;
             padding: 12px;
@@ -163,13 +143,10 @@
 
         .form-control:focus {
             outline: none;
-            border-color: #4CAF50; /* Green border on focus */
+            border-color: #4CAF50;
         }
 
-        /* ==============================================
-           FILE UPLOAD SECTION
-           ============================================== */
-        /* Drag and drop file upload area */
+        /* File Upload Section */
         .file-upload-area {
             border: 2px dashed #ddd;
             border-radius: 8px;
@@ -179,22 +156,17 @@
             transition: all 0.3s ease;
         }
 
-        /* Hover state for file upload */
         .file-upload-area:hover {
             border-color: #4CAF50;
             background: #f9f9f9;
         }
 
-        /* Active drag state */
         .file-upload-area.dragover {
             border-color: #4CAF50;
             background: #e8f5e8;
         }
 
-        /* ==============================================
-           STATISTICS DISPLAY
-           ============================================== */
-        /* Grid layout for statistics cards */
+        /* Statistics Display */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -202,7 +174,6 @@
             margin-bottom: 20px;
         }
 
-        /* Individual stat card styling */
         .stat-card {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -211,27 +182,22 @@
             text-align: center;
         }
 
-        /* Large number display in stat cards */
         .stat-value {
             font-size: 2.5em;
             font-weight: bold;
             margin-bottom: 10px;
         }
 
-        /* Label text in stat cards */
         .stat-label {
             font-size: 0.9em;
             opacity: 0.9;
         }
 
-        /* ==============================================
-           UTILITY CLASSES
-           ============================================== */
+        /* Utility Classes */
         .hidden {
-            display: none; /* Used to hide elements */
+            display: none;
         }
 
-        /* User information display */
         .user-info {
             background: rgba(255, 255, 255, 0.1);
             padding: 15px;
@@ -239,13 +205,11 @@
             color: white;
         }
 
-        /* Admin section highlighting */
         .admin-section {
             background: rgba(255, 235, 59, 0.1);
-            border-left: 4px solid #FFC107; /* Yellow accent */
+            border-left: 4px solid #FFC107;
         }
 
-        /* File list styling */
         .uploaded-files {
             margin-top: 20px;
         }
@@ -260,15 +224,12 @@
             align-items: center;
         }
 
-        /* WhatsApp quote section */
         .quote-section {
             background: rgba(37, 211, 102, 0.1);
-            border-left: 4px solid #25D366; /* WhatsApp green accent */
+            border-left: 4px solid #25D366;
         }
 
-        /* ==============================================
-           RESPONSIVE DESIGN
-           ============================================== */
+        /* Responsive Design */
         @media (max-width: 768px) {
             .nav {
                 flex-direction: column;
@@ -280,16 +241,14 @@
             }
             
             .stats-grid {
-                grid-template-columns: 1fr; /* Single column on mobile */
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- ==============================================
-             HEADER SECTION
-             ============================================== -->
+        <!-- Header Section -->
         <div class="header">
             <div class="nav">
                 <h1 style="color: white;">Web Application Dashboard</h1>
@@ -308,9 +267,7 @@
             </div>
         </div>
 
-        <!-- ==============================================
-             LOGIN FORM
-             ============================================== -->
+        <!-- Login Form -->
         <div id="loginForm" class="card hidden">
             <h2>Login</h2>
             <form onsubmit="login(event)">
@@ -327,9 +284,7 @@
             </form>
         </div>
 
-        <!-- ==============================================
-             REGISTRATION FORM
-             ============================================== -->
+        <!-- Registration Form -->
         <div id="registerForm" class="card hidden">
             <h2>Register</h2>
             <form onsubmit="register(event)">
@@ -357,11 +312,9 @@
             </form>
         </div>
 
-        <!-- ==============================================
-             MAIN CONTENT AREA
-             ============================================== -->
+        <!-- Main Content Area -->
         <div id="mainContent" class="hidden">
-            <!-- DYNO STATS DISPLAY -->
+            <!-- Dyno Stats Display -->
             <div class="card">
                 <h2>Dyno Statistics</h2>
                 <div class="stats-grid">
@@ -385,18 +338,15 @@
                 <button class="btn btn-secondary" onclick="refreshDynoStats()">Refresh Stats</button>
             </div>
 
-            <!-- FILE UPLOAD SECTION -->
+            <!-- File Upload Section -->
             <div class="card">
                 <h2>File Upload</h2>
-                <!-- Drag and drop area -->
                 <div class="file-upload-area" id="fileUploadArea">
                     <p>📁 Drag and drop files here or click to select</p>
                     <p style="color: #666; font-size: 0.9em;">Supported formats: Images, Documents, Archives</p>
                 </div>
-                <!-- Hidden file input -->
                 <input type="file" id="fileInput" multiple style="display: none;">
                 
-                <!-- Progress bar for uploads -->
                 <div id="uploadProgress" class="hidden" style="margin-top: 20px;">
                     <div style="background: #ddd; border-radius: 10px; overflow: hidden;">
                         <div id="progressBar" style="height: 20px; background: #4CAF50; width: 0%; transition: width 0.5s;"></div>
@@ -404,11 +354,10 @@
                     <p id="progressText" style="margin-top: 10px; text-align: center;">Uploading...</p>
                 </div>
 
-                <!-- List of uploaded files -->
                 <div id="uploadedFiles" class="uploaded-files"></div>
             </div>
 
-            <!-- WHATSAPP QUOTE SECTION -->
+            <!-- WhatsApp Quote Section -->
             <div class="card quote-section">
                 <h2>WhatsApp Quote Request</h2>
                 <p>Send a quote request directly to our WhatsApp business number</p>
@@ -435,22 +384,18 @@
             </div>
         </div>
 
-        <!-- ==============================================
-             ADMIN PORTAL
-             ============================================== -->
+        <!-- Admin Portal -->
         <div id="adminContent" class="hidden">
             <div class="card admin-section">
                 <h2>🔧 Admin Portal</h2>
                 <p>Advanced administrative functions</p>
                 
-                <!-- User management -->
                 <div style="margin: 20px 0;">
                     <h3>User Management</h3>
                     <div id="userList" style="margin: 15px 0;"></div>
                     <button class="btn btn-secondary" onclick="loadUsers()">Refresh User List</button>
                 </div>
                 
-                <!-- System stats -->
                 <div style="margin: 20px 0;">
                     <h3>System Statistics</h3>
                     <div class="stats-grid">
@@ -469,7 +414,6 @@
                     </div>
                 </div>
                 
-                <!-- System controls -->
                 <div style="margin: 20px 0;">
                     <h3>System Controls</h3>
                     <button class="btn btn-secondary" onclick="clearLogs()">Clear Logs</button>
@@ -480,11 +424,7 @@
     </div>
 
     <script>
-        /* ==============================================
-           GLOBAL VARIABLES & STATE MANAGEMENT
-           ============================================== */
-        
-        // Application state
+        // Global Variables & State Management
         let currentUser = null;
         let isLoggedIn = false;
         let uploadedFiles = [];
@@ -495,75 +435,56 @@
             usagePercent: 0
         };
         
-        // Mock user database (in real app, this would be server-side)
+        // Mock user database
         let users = [
             { username: 'admin', email: 'admin@example.com', password: 'admin123', role: 'admin' },
             { username: 'user', email: 'user@example.com', password: 'user123', role: 'user' }
         ];
 
-        /* ==============================================
-           AUTHENTICATION SYSTEM
-           ============================================== */
-        
-        /**
-         * Shows the login form and hides other auth elements
-         */
+        // Authentication System
         function showLogin() {
             document.getElementById('loginForm').classList.remove('hidden');
             document.getElementById('registerForm').classList.add('hidden');
             document.getElementById('authButtons').classList.add('hidden');
         }
 
-        /**
-         * Shows the registration form and hides other auth elements
-         */
         function showRegister() {
             document.getElementById('registerForm').classList.remove('hidden');
             document.getElementById('loginForm').classList.add('hidden');
             document.getElementById('authButtons').classList.add('hidden');
         }
 
-        /**
-         * Hides all authentication forms and shows auth buttons
-         */
         function hideAuth() {
             document.getElementById('loginForm').classList.add('hidden');
             document.getElementById('registerForm').classList.add('hidden');
             document.getElementById('authButtons').classList.remove('hidden');
         }
 
-        /**
-         * Handles user login
-         * @param {Event} event - Form submission event
-         */
         function login(event) {
             event.preventDefault();
             
             const username = document.getElementById('loginUsername').value;
             const password = document.getElementById('loginPassword').value;
             
-            // Find user in mock database
             const user = users.find(u => u.username === username && u.password === password);
             
             if (user) {
                 currentUser = user;
                 isLoggedIn = true;
                 
-                // Update UI
                 document.getElementById('welcomeText').textContent = `Welcome, ${user.username}!`;
                 document.getElementById('userInfo').classList.remove('hidden');
                 document.getElementById('authButtons').classList.add('hidden');
                 document.getElementById('loginForm').classList.add('hidden');
                 document.getElementById('mainContent').classList.remove('hidden');
                 
-                // Show admin content if user is admin
                 if (user.role === 'admin') {
                     document.getElementById('adminContent').classList.remove('hidden');
                     loadAdminStats();
                 }
                 
-                // Initialize dyno stats
                 loadDynoStats();
+                initFileUpload();
                 
                 alert('Login successful!');
             } else {
@@ -571,10 +492,6 @@
             }
         }
 
-        /**
-         * Handles user registration
-         * @param {Event} event - Form submission event
-         */
         function register(event) {
             event.preventDefault();
             
@@ -583,46 +500,32 @@
             const password = document.getElementById('regPassword').value;
             const role = document.getElementById('regRole').value;
             
-            // Check if username already exists
             if (users.find(u => u.username === username)) {
                 alert('Username already exists!');
                 return;
             }
             
-            // Add new user
             users.push({ username, email, password, role });
             
             alert('Registration successful! You can now login.');
             hideAuth();
         }
 
-        /**
-         * Logs out the current user
-         */
         function logout() {
             currentUser = null;
             isLoggedIn = false;
             
-            // Reset UI
             document.getElementById('userInfo').classList.add('hidden');
             document.getElementById('authButtons').classList.remove('hidden');
             document.getElementById('mainContent').classList.add('hidden');
             document.getElementById('adminContent').classList.add('hidden');
             
-            // Clear form data
             document.getElementById('loginUsername').value = '';
             document.getElementById('loginPassword').value = '';
         }
 
-        /* ==============================================
-           DYNO STATISTICS FUNCTIONALITY
-           ============================================== */
-        
-        /**
-         * Loads and displays dyno statistics
-         */
+        // Dyno Statistics Functionality
         function loadDynoStats() {
-            // Simulate API call with random data
             dynoStats = {
                 hoursUsed: Math.floor(Math.random() * 400) + 50,
                 monthlyQuota: 550,
@@ -636,9 +539,6 @@
             updateDynoDisplay();
         }
 
-        /**
-         * Updates the dyno statistics display
-         */
         function updateDynoDisplay() {
             document.getElementById('dynoHours').textContent = dynoStats.hoursUsed;
             document.getElementById('dynoQuota').textContent = dynoStats.monthlyQuota;
@@ -646,44 +546,30 @@
             document.getElementById('dynoPercent').textContent = dynoStats.usagePercent + '%';
         }
 
-        /**
-         * Refreshes dyno statistics (simulates API call)
-         */
         function refreshDynoStats() {
-            // Show loading state
             document.getElementById('dynoHours').textContent = '...';
             document.getElementById('dynoRemaining').textContent = '...';
             document.getElementById('dynoPercent').textContent = '...';
             
-            // Simulate API delay
             setTimeout(() => {
                 loadDynoStats();
                 alert('Dyno statistics refreshed!');
             }, 1000);
         }
 
-        /* ==============================================
-           FILE UPLOAD FUNCTIONALITY
-           ============================================== */
-        
-        /**
-         * Initializes file upload functionality
-         */
+        // File Upload Functionality
         function initFileUpload() {
             const fileUploadArea = document.getElementById('fileUploadArea');
             const fileInput = document.getElementById('fileInput');
 
-            // Click to select files
             fileUploadArea.addEventListener('click', () => {
                 fileInput.click();
             });
 
-            // Handle file selection
             fileInput.addEventListener('change', (e) => {
                 handleFiles(e.target.files);
             });
 
-            // Drag and drop events
             fileUploadArea.addEventListener('dragover', (e) => {
                 e.preventDefault();
                 fileUploadArea.classList.add('dragover');
@@ -698,16 +584,13 @@
                 fileUploadArea.classList.remove('dragover');
                 handleFiles(e.dataTransfer.files);
             });
+
+            updateUploadedFilesList();
         }
 
-        /**
-         * Handles file processing and upload simulation
-         * @param {FileList} files - Files to be uploaded
-         */
         function handleFiles(files) {
             const fileArray = Array.from(files);
             
-            // Validate file types
             const allowedTypes = ['image/', 'application/pdf', 'text/', 'application/msword', 'application/zip'];
             const validFiles = fileArray.filter(file => {
                 return allowedTypes.some(type => file.type.startsWith(type));
@@ -719,14 +602,9 @@
 
             if (validFiles.length === 0) return;
 
-            // Simulate upload process
             simulateUpload(validFiles);
         }
 
-        /**
-         * Simulates file upload with progress bar
-         * @param {Array} files - Array of files to upload
-         */
         function simulateUpload(files) {
             const progressContainer = document.getElementById('uploadProgress');
             const progressBar = document.getElementById('progressBar');
@@ -742,7 +620,6 @@
                     progress = 100;
                     clearInterval(interval);
                     
-                    // Add files to uploaded list
                     files.forEach(file => {
                         uploadedFiles.push({
                             name: file.name,
@@ -762,9 +639,6 @@
             }, 200);
         }
 
-        /**
-         * Updates the display of uploaded files
-         */
         function updateUploadedFilesList() {
             const container = document.getElementById('uploadedFiles');
             
@@ -786,11 +660,6 @@
             container.innerHTML = `<h3>Uploaded Files (${uploadedFiles.length})</h3>${fileList}`;
         }
 
-        /**
-         * Formats file size for display
-         * @param {number} bytes - File size in bytes
-         * @returns {string} Formatted file size
-         */
         function formatFileSize(bytes) {
             if (bytes === 0) return '0 Bytes';
             const k = 1024;
@@ -799,22 +668,12 @@
             return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
         }
 
-        /**
-         * Removes a file from the uploaded files list
-         * @param {number} index - Index of file to remove
-         */
         function removeFile(index) {
             uploadedFiles.splice(index, 1);
             updateUploadedFilesList();
         }
 
-        /* ==============================================
-           WHATSAPP INTEGRATION
-           ============================================== */
-        
-        /**
-         * Sends a quote request via WhatsApp
-         */
+        // WhatsApp Integration
         function sendWhatsAppQuote() {
             const message = document.getElementById('quoteMessage').value;
             const name = document.getElementById('contactName').value;
@@ -825,7 +684,6 @@
                 return;
             }
             
-            // Construct WhatsApp message
             let whatsappMessage = `Quote Request from ${name || 'Customer'}\n\n`;
             whatsappMessage += `Message: ${message}\n\n`;
             
@@ -840,36 +698,24 @@
                 });
             }
             
-            // WhatsApp Web URL with phone number and message
-            const phoneNumber = '447546371963'; // UK format without +
+            const phoneNumber = '447546371963';
             const encodedMessage = encodeURIComponent(whatsappMessage);
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
             
-            // Open WhatsApp in new tab
             window.open(whatsappURL, '_blank');
             
-            // Clear form
             document.getElementById('quoteMessage').value = '';
             document.getElementById('contactName').value = '';
             document.getElementById('contactEmail').value = '';
         }
 
-        /* ==============================================
-           ADMIN PORTAL FUNCTIONALITY
-           ============================================== */
-        
-        /**
-         * Loads admin statistics
-         */
+        // Admin Portal Functionality
         function loadAdminStats() {
             document.getElementById('totalUsers').textContent = users.length;
             document.getElementById('totalFiles').textContent = uploadedFiles.length;
             document.getElementById('totalQuotes').textContent = Math.floor(Math.random() * 50) + 10;
         }
 
-        /**
-         * Loads and displays user list for admin
-         */
         function loadUsers() {
             const userList = document.getElementById('userList');
             const userHTML = users.map((user, index) => `
@@ -885,14 +731,40 @@
             userList.innerHTML = userHTML;
         }
 
-        /**
-         * Deletes a user (admin only)
-         * @param {number} index - Index of user to delete
-         */
         function deleteUser(index) {
             if (users[index].username === 'admin') {
                 alert('Cannot delete the admin user!');
                 return;
             }
             
-            if (confirm(`Are you sure you want to delete user "${users[index
+            if (confirm(`Are you sure you want to delete user "${users[index].username}"?`)) {
+                users.splice(index, 1);
+                loadUsers();
+                loadAdminStats();
+            }
+        }
+
+        function clearLogs() {
+            alert('System logs cleared successfully!');
+        }
+
+        function resetSystem() {
+            if (confirm('Are you sure you want to reset the entire system? This will clear all data.')) {
+                uploadedFiles = [];
+                users = [
+                    { username: 'admin', email: 'admin@example.com', password: 'admin123', role: 'admin' },
+                    { username: 'user', email: 'user@example.com', password: 'user123', role: 'user' }
+                ];
+                updateUploadedFilesList();
+                loadAdminStats();
+                alert('System reset successfully!');
+            }
+        }
+
+        // Initialize the application when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Application loaded successfully!');
+        });
+    </script>
+</body>
+</html>
